@@ -53,3 +53,14 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+# CubeMX and others.
+Debug/
+Release/
+*.launch
+
+*~
+*.bak*
+.DS_Store
+._.DS_Store

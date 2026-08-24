@@ -46,4 +46,3 @@ int mrbc_hal_flush(int fd)
 void mrbc_hal_abort(const char *s)
 {
 }
-

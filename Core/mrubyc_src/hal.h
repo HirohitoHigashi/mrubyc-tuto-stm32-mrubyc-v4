@@ -7,9 +7,9 @@
 #define MRBC_TIMESLICE_TICK_COUNT 10
 
 #define mrbc_hal_init()        ((void)0)
-#define mrbc_hal_enable_irq()  ((void)0)
-#define mrbc_hal_disable_irq() ((void)0)
-#define mrbc_hal_idle_cpu()    (HAL_Delay(MRBC_TICK_UNIT), mrbc_tick())
+#define mrbc_hal_enable_irq()  __enable_irq()
+#define mrbc_hal_disable_irq() __disable_irq()
+#define mrbc_hal_idle_cpu()    HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI)
 
 int mrbc_hal_write(int fd, const void *buf, int nbytes);
 int mrbc_hal_flush(int fd);
